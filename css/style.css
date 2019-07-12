@@ -1,0 +1,16 @@
+.calc input {
+	background-color: green;
+	border: 1 px solid gray;
+	color: white;
+	cursor: pointer;
+	float: left;
+	width: 5%;
+}
+.calc:after{
+	content: "";
+	clear: both;
+	display: table;
+}
+.calc input:hover{
+	background-color: black;
+}
