@@ -1,12 +1,15 @@
-function showOnConsole(val)
+function showOnConsole(val,event)
 {
+    event.preventDefault();
 	document.getElementById("res").value+=val;
 }
-function clearConsole()
+function clearConsole(event)
 {
+    event.preventDefault();
 	document.getElementById("res").value="";
 }
-function calculate()
+function calculate(event)
 {
+    event.preventDefault();
 	document.getElementById("res").value=eval(document.getElementById("res").value);
 }
