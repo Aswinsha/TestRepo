@@ -1,0 +1,53 @@
+*{
+    margin:0px;
+    box-sizing:border-box;
+}
+body{
+    background: #bc4e9c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f80759, #bc4e9c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f80759, #bc4e9c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: absolute;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+}
+form{
+    overflow:hidden;
+    background: white;
+    width:25%;
+    margin:3em auto;
+    height:30em;
+    border-radius:6px;
+    box-shadow:  10px,0px,10px,10px rgb(20, 20, 20);
+}
+#res{
+    width:100%;
+    background: rgb(236, 234, 234);
+    border:none;
+    height:25%;
+    text-align: end;
+    font-size: 3em;
+    font-weight: 20;
+    color:rgb(65, 63, 63);
+    padding:10px;
+}
+.btnPanel {
+    width:100%;
+    height:75%;
+}
+.btnPanel button {
+    margin:0px;
+    float:left;
+    width:25%;
+    height:25%;
+    border:none;
+    font-size: 3em;
+    color:white;
+    background: #0986ac;
+    transition: .2s;
+}
+.btnPanel button:hover {
+    background: #0e7594;
+    font-size: 4.5em;
+}

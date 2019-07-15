@@ -1,75 +1,32 @@
 <html>
 <head>
-<title>CALCULATOR</title>
+	<title>CALCULATOR</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
-<style>
-.calc input {
-	background-color: green;
-	border: 1 px solid gray;
-	color: white;
-	cursor: pointer;
-	float: left;
-	width: 5%;
-}
-.calc:after{
-	content: "";
-	clear: both;
-	display: table;
-}
-.calc input:hover{
-	background-color: black;
-}
-</style>
-<script>
-function showOnConsole(val)
-{
-	document.getElementById("res").value+=val;
-}
-function clearConsole()
-{
-	document.getElementById("res").value="";
-}
-function calculate()
-{
-	document.getElementById("res").value=eval(document.getElementById("res").value);
-}
-</script>
 <body>
-<form>
-<h2>Calculator</h1>
-<div>
-Result:<br>
-<input type="text-area" name="result" id="res" rows="10" columns="150" style="width:20%;"><br>
-</div>
-<br>
+	<form>
+		<input type="text-area" name="result" id="res" rows="10" columns="150" autocomplete="off">
+		
+			<div class="btnPanel">
+				<button	onclick="showOnConsole('1',event)" >1</button>
+				<button	onclick="showOnConsole('2',event)" >2</button>
+				<button	onclick="showOnConsole('3',event)" >3</button>
+				<button	onclick="showOnConsole('+',event)" >+</button>
+				<button	onclick="showOnConsole('4',event)" >4</button>
+				<button	onclick="showOnConsole('5',event)" >5</button>
+				<button	onclick="showOnConsole('6',event)" >6</button>
+				<button	onclick="showOnConsole('-',event)" >-</button>
+				<button	onclick="showOnConsole('7',event)" >7</button>
+				<button	onclick="showOnConsole('8',event)" >8</button>
+				<button	onclick="showOnConsole('9',event)" >9</button>
+				<button	onclick="showOnConsole('*',event)" >*</button>
+				<button	onclick="clearConsole(event)" >C</button>
+				<button	onclick="calculate(event)" >=</button>
+				<button	onclick="showOnConsole('0',event)" >0</button>
+				<button	onclick="showOnConsole('/',event)" >/</button>
+			</div>
 
-<div class="calc">
-<input type="button" value="1" onclick="showOnConsole('1')"/>
-<input type="button" value="2" onclick="showOnConsole('2')"/>
-<input type="button" value="3" onclick="showOnConsole('3')"/>
-<input type="button" value="+" onclick="showOnConsole('+')"/>
-</div>
-
-<div class="calc">
-<input type="button" value="4" onclick="showOnConsole('4')"/>
-<input type="button" value="5" onclick="showOnConsole('5')"/>
-<input type="button" value="6" onclick="showOnConsole('6')"/>
-<input type="button" value="-" onclick="showOnConsole('-')"/>
-</div>
-
-<div class="calc">
-<input type="button" value="7" onclick="showOnConsole('7')"/>
-<input type="button" value="8" onclick="showOnConsole('8')"/>
-<input type="button" value="9" onclick="showOnConsole('9')"/>
-<input type="button" value="*" onclick="showOnConsole('*')"/>
-</div>
-
-<div class="calc">
-<input type="button" value="c" onclick="clearConsole()"/>
-<input type="button" value="=" onclick="calculate()"/>
-<input type="button" value="0" onclick="showOnConsole('0')"/>
-<input type="button" value="/" onclick="showOnConsole('/')"/>
-</div>
-
-</form>
+	</form>
+	<script src="js/app.js"></script>
 </body>
+</html>
