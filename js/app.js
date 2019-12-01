@@ -28,13 +28,34 @@ $(document).ready(function () {
 					var result = parseFloat(t) - parseFloat(digits[k+1]);
 					t = result;
 				}
-				console.log("result:",t);				
+						
             }
 			console.log("totalresult:",t);
+			
+			if(!Number.isInteger(result))
+			{
+				if(precision(result)>4)
+				result = result.toFixed(4);
+			}
+			if(isNaN(t))
+			{
+				result="Invalid Expr";
+			}
 			document.getElementById("res").value = result;
         }
     }
-	
+	function precision(num)
+	{
+		if(!isFinite(num))
+			return 0;
+		var e=1,p=0;
+		while(Math.round(num*e)/e!==num)
+		{
+			e*=10;
+			p++;
+		}
+		return p;
+	}
 	function getDigitsAndOperators(expr){
 		
 		var copy = expr;
