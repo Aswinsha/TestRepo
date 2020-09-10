@@ -15,9 +15,9 @@ body{
 form{
     overflow:hidden;
     background: white;
-    width:50%;
-    margin:3em auto;
-    height:30em;
+    width:100%;
+    margin:0px;
+    height:100%;
     border-radius:6px;
     box-shadow:  10px,0px,10px,10px rgb(20, 20, 20);
 }
