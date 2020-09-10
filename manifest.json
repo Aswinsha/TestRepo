@@ -1,0 +1,15 @@
+{
+  "name": "Calculator",
+  "version": "1.0.0",
+  "description": "Calculator",
+  "homepage_url": "https://github.com/chr314/accessibility-extension",
+  "author": "Aswini S,RajaKumar S",
+  "manifest_version": 2,
+   "browser_action": {
+    "default_title": "Calculator",
+    "default_popup": "popup.html",
+	"default_icon": {
+		"32" : "images/icon4.png"
+	}
+   }
+}
